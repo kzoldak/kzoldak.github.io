@@ -17,6 +17,16 @@ description: >
 #avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
 #avatar: https://github.com/kzoldak/kzoldak.github.io./blob/master/images/Siri_and_I.jpg
 
+# Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
+# Used for Sitemap.xml and your RSS feed
+url:"http://kzoldak.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+# If you're hosting your site at a Project repository on GitHub pages
+# (http://yourusername.github.io/repository-name)
+# and NOT your User repository (http://yourusername.github.io)
+# then add in the baseurl here, like this: "/repository-name"
+baseurl: ""
+
+
 #
 # Flags below are optional
 #
@@ -45,14 +55,7 @@ disqus:
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:
 
-# Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
-# Used for Sitemap.xml and your RSS feed
-url:"http://kzoldak.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-# If you're hosting your site at a Project repository on GitHub pages
-# (http://yourusername.github.io/repository-name)
-# and NOT your User repository (http://yourusername.github.io)
-# then add in the baseurl here, like this: "/repository-name"
-baseurl: ""
+
 
 #
 # !! You don't need to change any of the configuration flags below !!
