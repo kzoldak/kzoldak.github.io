@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Python Sites
+title: Python_Sites
 permalink: /pythonsites/
 ---
 
