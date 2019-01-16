@@ -20,6 +20,9 @@ permalink: /pythonsites/
 
 [datacamp.com tutorials](https://www.datacamp.com/community/tutorials). Once at this page, you can navigate the page and see all it has to offer. 
 
+[__BOOK__:Python for Data Analysis by Wes McKinney.](https://www.oreilly.com/library/view/python-for-data/9781449323592/)
+and [his Github Page with content to go with it](https://github.com/wesm/pydata-book).
+
 
 ## Plotting in Matplotlib
 [Drop and Drag Text Example code, for moving text labels](http://scipy-cookbook.readthedocs.io/items/Matplotlib_Drag_n_Drop_Text_Example.html)
