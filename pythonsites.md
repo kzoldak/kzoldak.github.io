@@ -21,7 +21,7 @@ permalink: /pythonsites/
 [datacamp.com tutorials](https://www.datacamp.com/community/tutorials). Once at this page, you can navigate the page and see all it has to offer. 
 
 [__BOOK__:Python for Data Analysis by Wes McKinney.](https://www.oreilly.com/library/view/python-for-data/9781449323592/)
-and [his Github Page with content to go with it](https://github.com/wesm/pydata-book).
+and [his Github Page with content to go with it](https://github.com/wesm/pydata-book). This is the same guy who created `pandas`, so you know he rocks!!
 
 
 ## Plotting in Matplotlib
