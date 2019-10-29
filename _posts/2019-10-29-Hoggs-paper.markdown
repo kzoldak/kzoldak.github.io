@@ -8,24 +8,26 @@ These are my notes on the following paper: [Data analysis recipes: Fitting a mod
 
 
 # Linear Model
-$$\begin{align} y=mx+b \end{align}$$
-
-$$y=mx+b$$
-
-$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
-
+$$ y=mx+b $$
+where $$m$$ is slope and $$b$$ is the intercept of the line. 
 
 
 
 # Likelihood, $$\mathcal{L}$$
-The likelihood is the frequencey distribution for the observables evaluated at the observed data, $$y_i$$. It is also (more commonly) referred to as "the likelihood of the parameters", eventhough it is a function of both the data and the model parameters. 
+The likelihood is the frequencey distribution for the observables evaluated at the observed data, $$y_i$$. It is also more commonly referred to as "the likelihood of the parameters", even though it is a function of both the data and the model parameters. 
+
+$$
+\mathcal{L} = 
+$$
+
+When maximizing the likelihood, the log-likelihood is easier to work with. This is often not explained, but here is why:
 
 
-
-The likelihood of the parameters. Or, the frequencey distribution for the observables evaluated at the observed data $y_i$. The likelihood is a function of both the data and the model parameters. 
-
-
-
+$$
+\begin{equation}
+\mathcal{L} = \prod^N_{i=1} p(y_i | x_i, \sigma_{yi}, m, b)
+\end{equation}
+$$
 
 
 git add -A
