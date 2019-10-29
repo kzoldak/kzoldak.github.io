@@ -16,6 +16,11 @@ $$y=mx+b$$
 ${\displaystyle {\frac{1}{\sqrt{2\pi \sigma^{2}}}}e^{-{\frac {(x-\mu)^{2}}{2\sigma^{2}}}}}$
 
 
+\begin{displaymath} y = mx+b \end{displaymath}
+
+$$\begin{displaymath} y = mx+b \end{displaymath}$$
+
+$\begin{displaymath} y = mx+b \end{displaymath}$
 
 
 # Likelihood, $$\mathcal{L}$$
