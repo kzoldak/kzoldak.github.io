@@ -34,6 +34,39 @@ $$
 $$
 
 
+$$
+\begin{equation}\label{eq:Yvector}
+\qquad 
+\mathbf{Y}=
+\begin{bmatrix}
+y_{1} \\
+y_{2} \\
+\vdots \\
+y_{N}
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}\label{eq:Amatrix}
+\qquad 
+\mathbf{A}=
+\begin{bmatrix}
+1 & x_{1}\\ 
+1 & x_{2}\\
+\vdots \\ 
+1 & x_{N}
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}\label{eq:Cmatrix}
+\mathbf{C}=
+\begin{bmatrix}
+\sigma_{y_1}^2 & 0 & \ldots & 0 \\ 
+0 & \sigma_{y_2}^2 & \ldots & 0 \\
+0 & 0 & \ddots & 0 \\ 
+0 & 0 & \ldots & \sigma_{y_N}^2 
+\end{bmatrix}
+\end{equation}
+$$
 
 git add -A
 
