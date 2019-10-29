@@ -16,5 +16,4 @@ closer instead of making up excuses for my poor habits, such as "I learned them 
 I must admit, I have neglected my responsibilities a bit as a Python programmer. I have yet to read the PEP 8 Style Guidelines until very recently. I *always knew* there were good habits for writing clean and consistent code, but for many years I continued to trudge along picking up some good, but also many bad habits along my journey of self-taught Python programming skills. 
 
 
-and bad habits, but I trudged along picking 
 
