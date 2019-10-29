@@ -21,7 +21,7 @@ $$
 {\displaystyle f(x\mid \mu ,\sigma ^{2})={\frac {1}{\sqrt {2\pi \sigma ^{2}}}}e^{-{\frac {(x-\mu )^{2}}{2\sigma ^{2}}}}}
 $$
 
-where $$mu$$ is the mean, $$\sigma^2$$ is the variance, and $$\sigma$$ is the standard deviation. Since we have data that is normally distributed about a linear model, $$x \rightarrow y_i$, $$\mu \rightarrow y_{model} = mx_i + b$$, and $$\sigma \rightarrow \sigma_{yi}$$. 
+where $$mu$$ is the mean, $$\sigma^2$$ is the variance, and $$\sigma$$ is the standard deviation. Since we have data that is normally distributed about a linear model, $$x \rightarrow y_i$$, $$\mu \rightarrow y_{model} = mx_i + b$$, and $$\sigma \rightarrow \sigma_{yi}$$. 
 
 
 
