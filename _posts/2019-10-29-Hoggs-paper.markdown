@@ -8,7 +8,9 @@ These are my notes on the following paper: [Data analysis recipes: Fitting a mod
 
 
 # Linear Model
-$$ y=mx+b $$
+$$ 
+y=mx+b 
+$$
 where $$m$$ is slope and $$b$$ is the intercept of the line. 
 
 
@@ -20,7 +22,7 @@ $$
 \mathcal{L} = \prod^N_{i=1} p(y_i | x_i, \sigma_{yi}, m, b)
 $$
 
-where $$p(y_i | x_i, \sigma_{yi}, m, b)$$ is the frequencey distribution. In our case, lets use the standard normal (i.e., Gaussian) distribution.
+where $$ p(y_i | x_i, \sigma_{yi}, m, b) $$ is the frequencey distribution. In our case, lets use the standard normal (i.e., Gaussian) distribution.
 
 $$
 p(y_i | x_i, \sigma_{yi}, m, b) = \frac{1}{\sqrt{2\pi\sigma_{yi}^2}} \exp\left(-\frac{(y_i - (mx_i + b))^2}{2 \sigma_{yi}^2}\right)
