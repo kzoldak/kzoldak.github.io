@@ -15,11 +15,6 @@ $$y=mx+b$$
 $$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
 
 
-\begin{displaymath} y = mx+b \end{displaymath}
-
-$$\begin{displaymath} y = mx+b \end{displaymath}$$
-
-$\begin{displaymath} y = mx+b \end{displaymath}$
 
 
 # Likelihood, $$\mathcal{L}$$
