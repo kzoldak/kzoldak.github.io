@@ -21,7 +21,7 @@ $$
 {\displaystyle f(x\mid \mu ,\sigma ^{2})={\frac {1}{\sqrt {2\pi \sigma ^{2}}}}e^{-{\frac {(x-\mu )^{2}}{2\sigma ^{2}}}}}
 $$
 
-where $$mu$$ is the mean, $$\sigma^2$$ is the variance, and $$\sigma$$ is the standard deviation. Since we have data that is normally distributed about a linear model ($$y=mx+b$$), we replace the following: 
+where $$mu$$ is the mean, $$\sigma^2$$ is the variance, and $$\sigma$$ is the standard deviation. Since we have data that is normally distributed about a linear model ($$y=mx+b$$), we make the following substitutions: 
 $$x \rightarrow y_i$$, 
 $$\mu \rightarrow y_{model} = mx_i + b$$, and 
 $$\sigma \rightarrow \sigma_{yi}$$. 
@@ -29,10 +29,18 @@ $$\sigma \rightarrow \sigma_{yi}$$.
 We now have:
 
 $$
+p(y_i \mid x_i, \sigma_{yi}, m, b) = \frac{1}{\sqrt{2\pi\sigma_{yi}^2}} \exp\left(-\frac{\left[y_i - y_{model}\right]^2}{2 \sigma_{yi}^2}\right) 
+$$
+
+$$
 p(y_i \mid x_i, \sigma_{yi}, m, b) = \frac{1}{\sqrt{2\pi\sigma_{yi}^2}} \exp\left(-\frac{\left[y_i - (mx_i + b)\right]^2}{2 \sigma_{yi}^2}\right) 
 $$
 
-for our distribution. We also replaced p for f to be consistent with Hogg et al's paper. 
+$$
+p(y_i \mid x_i, \sigma_{yi}, m, b) = \frac{1}{\sqrt{2\pi\sigma_{yi}^2}} \exp\left(-\frac{\left[y_i - mx_i - b)\right]^2}{2 \sigma_{yi}^2}\right) 
+$$
+
+Notice that we also replaced f with p to match Hogg et al's paper. This helps to remind us that this function is representative of the probability of $$y_i$$ given the $$x_i$$ and model parameters. 
 
 
 
@@ -48,22 +56,23 @@ $$
 \mathcal{L} = \prod^N_{i=1} p(y_i \mid x_i, \sigma_{yi}, m, b)
 $$
 
-where $$ p(y_i \mid x_i, \sigma_{yi}, m, b) $$ is the frequencey distribution. In our case, we will use the Gaussian distribution's PDF, presented above, thus:
-
+where $$ p(y_i \mid x_i, \sigma_{yi}, m, b) $$ is the frequencey distribution (or the probability distribution we presented above) for Gaussian distributed data about a linear model. 
+Plugging it into the likelihood:
 $$
-\mathcal{L} = \prod^N_{i=1} \frac{1}{\sqrt{2\pi\sigma_{yi}^2}} \exp\left(-\frac{(y_i - (mx_i + b))^2}{2 \sigma_{yi}^2}\right) .
-$$
-
-
-
-
-When maximizing the likelihood ($$\mathcal{L}$$), the log-likelihood ($$\ln(\mathcal{L})$$) is easier to work with. The reason for this is that the logarithmic product rule ($$ \log(xy) = \log(x) + \log(y) $$) turns products into sums, and sums are much easier to work with. 
-
-
-$$
-\mathcal{L} = \prod^N_{i=1} p(y_i | x_i, \sigma_{yi}, m, b)
+\mathcal{L} = \prod^N_{i=1} \frac{1}{\sqrt{2\pi\sigma_{yi}^2}} \exp\left(-\frac{(y_i - mx_i - b)^2}{2 \sigma_{yi}^2}\right) .
 $$
 
+
+When performing maximum likelihood estimation, the log-likelihood ($$\ln(\mathcal{L})$$) is used instead of the likelihood ($$\mathcal{L}$$). This is because the log-likelihood is easier to work with. The logarithmic product rule ($$ \log(xy) = \log(x) + \log(y) $$) allows products to be turned into sums, which are much easier to work with. 
+
+
+
+$$
+\ln(\mathcal{L}) = \sum^N_{i=1} p(y_i | x_i, \sigma_{yi}, m, b)
+$$
+
+
+$$ -0.5 n\ln(2\pi)-n \ln \sigma-(\sum(x_i-\mu)^2)/(2\sigma^2) $$
 
 $$
 \begin{equation}
