@@ -15,11 +15,13 @@ where $$m$$ is slope and $$b$$ is the intercept of the line.
 
 
 # Gaussian Distribution's PDF
-For this work we will assume that the data $$(x_i, y_i)$$ were all drawn from a standard normal distribution (i.e., Gaussian with zero mean)
+For this work we will assume that the data $$(x_i, y_i)$$ were all drawn from a normal distribution (or Gaussian) with a zero mean and a known variance $$\sigma_{yi}^2$$. 
+$$
+p(y_i \mid x_i, \sigma_{yi}, m, b) = \frac{1}{\sqrt{2\pi\sigma_{yi}^2}} \exp\left(-\frac{\left[y_i - (mx_i + b)\right]^2}{2 \sigma_{yi}^2}\right) 
+$$
 
-$$
-p(y_i \mid x_i, \sigma_{yi}, m, b) = \frac{1}{\sqrt{2\pi\sigma_{yi}^2}} \exp\left(-\frac{\left[y_i - (mx_i + b)\right]^2}{2 \sigma_{yi}^2}\right)
-$$
+The values given by $$ mx_i + b $$ represent the model estiamtes for $$y$$, so we will call them $$y_{model}$$. 
+
 
 
 
