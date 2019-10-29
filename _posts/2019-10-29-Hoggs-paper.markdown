@@ -1,8 +1,7 @@
 ---
 layout: post
-title: Fitting a model to data.
+title: "Fitting a model to data."
 comments: true
-redirect_from: "/2019/10/29/HoggLinearModeling.html"
 ---
 
 These are my notes on the following paper: [Data analysis recipes: Fitting a model to data](https://arxiv.org/pdf/1008.4686.pdf).
@@ -15,6 +14,7 @@ $$y=mx+b$$
 
 
 ${\displaystyle {\frac{1}{\sqrt{2\pi \sigma^{2}}}}e^{-{\frac {(x-\mu)^{2}}{2\sigma^{2}}}}}$
+
 
 
 
