@@ -8,9 +8,9 @@ These are my notes on the following paper: [Data analysis recipes: Fitting a mod
 
 
 # Linear Model
-$$\begin{align} 
-y=mx+b
-\end{align}$$
+$$\begin{align} y=mx+b \end{align}$$
+
+${\displaystyle {\frac{1}{\sqrt{2\pi \sigma^{2}}}}e^{-{\frac {(x-\mu)^{2}}{2\sigma^{2}}}}}$
 
 
 
@@ -20,3 +20,13 @@ The likelihood of the parameters. Or, the frequencey distribution for the observ
 \begin{equaton}
 \mathcal{L} = \product_{i=1}^N p(y_i|x_i, \sigma_{yi}, m, b)
 \end{equation}
+
+
+
+
+
+git add -A
+
+git commit -m 'new'
+
+git push origin master
