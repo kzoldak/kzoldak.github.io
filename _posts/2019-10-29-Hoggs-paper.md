@@ -8,7 +8,10 @@ These are my notes on the following paper: [Data analysis recipes: Fitting a mod
 
 
 # Linear Model
-$y=mx+b$
+$$\begin{align} 
+y=mx+b
+\end{align}$$
+
 
 
 # Likelihood, $\mathcal{L}$
