@@ -15,12 +15,12 @@ where $$m$$ is slope and $$b$$ is the intercept of the line.
 
 
 # Gaussian Distribution's PDF
-For this work we will assume that the data $$(x_i, y_i)$$ were all drawn from a normal distribution (or Gaussian) with a zero mean and a known variance $$\sigma_{yi}^2$$. 
+For this work we will assume that the data $$(x_i, y_i)$$ were drawn from a normal distribution (or Gaussian) with zero mean and known variance $$\sigma_{yi}^2$$ about our linear model. The normal distribution's probability function is given by: 
 $$
 p(y_i \mid x_i, \sigma_{yi}, m, b) = \frac{1}{\sqrt{2\pi\sigma_{yi}^2}} \exp\left(-\frac{\left[y_i - (mx_i + b)\right]^2}{2 \sigma_{yi}^2}\right) 
 $$
+where $$ mx_i + b $$ represent the model estiamtes of $$y$$. I may refer to these as $$y_{model}$$ or $$ymodel$$. I may also refer to the y-axis data ($$y_i$$) as $$y_{data}$$ or $$ydata$$. 
 
-The values given by $$ mx_i + b $$ represent the model estiamtes for $$y$$, so we will call them $$y_{model}$$. 
 
 
 
