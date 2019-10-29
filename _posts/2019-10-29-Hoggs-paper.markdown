@@ -15,29 +15,39 @@ where $$m$$ is slope and $$b$$ is the intercept of the line.
 
 
 # Gaussian Distribution's PDF
-For this work we will assume that the data $$(x_i, y_i)$$ were drawn from a normal distribution (or Gaussian) with zero mean and known variance $$\sigma_{yi}^2$$ about our linear model. The normal distribution's probability function is given by: 
+For this work we will assume that the data $$(x_i, y_i)$$ were drawn from a normal distribution (or Gaussian) with zero mean and known variance $$\sigma_{yi}^2$$ about our  model. The normal distribution's probability function is given by: 
+
+$$
+{\displaystyle f(x\mid \mu ,\sigma ^{2})={\frac {1}{\sqrt {2\pi \sigma ^{2}}}}e^{-{\frac {(x-\mu )^{2}}{2\sigma ^{2}}}}}
+$$
+
+
+
+
 $$
 p(y_i \mid x_i, \sigma_{yi}, m, b) = \frac{1}{\sqrt{2\pi\sigma_{yi}^2}} \exp\left(-\frac{\left[y_i - (mx_i + b)\right]^2}{2 \sigma_{yi}^2}\right) 
 $$
-where $$ mx_i + b $$ represent the model estiamtes of $$y$$. I may refer to these as $$y_{model}$$ or $$ymodel$$. I may also refer to the y-axis data ($$y_i$$) as $$y_{data}$$ or $$ydata$$. 
 
-
+where $$ mx_i + b $$ represent the model estimates of $$y$$. I may refer to these as $$y_{model}$$ or $$ymodel$$. I may also refer to the y-axis data ($$y_i$$) as $$y_{data}$$ or $$ydata$$. 
 
 
 
 
 # Likelihood, $$\mathcal{L}$$
-The likelihood is the frequencey distribution for the observables evaluated at the observed data, $$y_i$$. It is also more commonly referred to as "the likelihood of the parameters", even though it is a function of both the data and the model parameters. 
+The likelihood is the frequencey distribution for the observables evaluated at the observed data, $$y_i$$. It is also more commonly referred to as "the likelihood of the parameters", even though it is a function of both the data and the model parameters. The likelihood function is given by:
 
 $$
 \mathcal{L} = \prod^N_{i=1} p(y_i \mid x_i, \sigma_{yi}, m, b)
 $$
 
-where $$ p(y_i \mid x_i, \sigma_{yi}, m, b) $$ is the frequencey distribution. In our case, lets use the standard normal (i.e., Gaussian) distribution.
+where $$ p(y_i \mid x_i, \sigma_{yi}, m, b) $$ is the frequencey distribution. In our case, we will use the Gaussian distribution's PDF, presented above, thus:
 
 $$
-p(y_i \mid x_i, \sigma_{yi}, m, b) = \frac{1}{\sqrt{2\pi\sigma_{yi}^2}} \exp\left(-\frac{(y_i - (mx_i + b))^2}{2 \sigma_{yi}^2}\right)
+\mathcal{L} = \prod^N_{i=1} \frac{1}{\sqrt{2\pi\sigma_{yi}^2}} \exp\left(-\frac{(y_i - (mx_i + b))^2}{2 \sigma_{yi}^2}\right) .
 $$
+
+
+
 
 When maximizing the likelihood ($$\mathcal{L}$$), the log-likelihood ($$\ln(\mathcal{L})$$) is easier to work with. The reason for this is that the logarithmic product rule ($$ \log(xy) = \log(x) + \log(y) $$) turns products into sums, and sums are much easier to work with. 
 
