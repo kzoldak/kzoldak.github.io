@@ -20,7 +20,8 @@ $$
 \mathcal{L} = 
 $$
 
-When maximizing the likelihood, the log-likelihood is easier to work with. This is often not explained, but here is why:
+When maximizing the likelihood (\mathcal{L}), the log-likelihood ($$\ln(\mathcal{L})$$) is easier to work with. The reason for this is that the logarithmic product rule ($$ \log(xy) = \log(x) + \log(y) $$) turns products into sums, and sums are much easier to work with. 
+This is often not explained, but here is why:
 
 
 $$
@@ -28,6 +29,11 @@ $$
 \mathcal{L} = \prod^N_{i=1} p(y_i | x_i, \sigma_{yi}, m, b)
 \end{equation}
 $$
+
+$$
+\mathcal{L_2} = \prod^N_{i=1} p(y_i | x_i, \sigma_{yi}, m, b)
+$$
+
 
 
 git add -A
