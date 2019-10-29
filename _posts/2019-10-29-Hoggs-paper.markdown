@@ -18,8 +18,8 @@ ${\displaystyle {\frac{1}{\sqrt{2\pi \sigma^{2}}}}e^{-{\frac {(x-\mu)^{2}}{2\sig
 
 
 
-# Likelihood, $\mathcal{L}$
-The likelihood is the frequencey distribution for the observables evaluated at the observed data, $y_i$. It is also (more commonly) referred to as "the likelihood of the parameters", eventhough it is a function of both the data and the model parameters. 
+# Likelihood, $$\mathcal{L}$$
+The likelihood is the frequencey distribution for the observables evaluated at the observed data, $$y_i$$. It is also (more commonly) referred to as "the likelihood of the parameters", eventhough it is a function of both the data and the model parameters. 
 
 
 
