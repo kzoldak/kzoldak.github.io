@@ -23,7 +23,7 @@ $$
 where $$p(y_i | x_i, \sigma_{yi}, m, b)$$ is the frequencey distribution. In our case, lets use the standard normal (i.e., Gaussian) distribution.
 
 $$
-p(y_i | x_i, \sigma_{yi}, m, b) = \frac{1}{\sqrt{2\pi\sigma_{yi}^2}} \exp\left(-\frac{(y_i - (mx_i + b))^2}{2 \sigma^2}\right)
+p(y_i | x_i, \sigma_{yi}, m, b) = \frac{1}{\sqrt{2\pi\sigma_{yi}^2}} \exp\left(-\frac{(y_i - (mx_i + b))^2}{2 \sigma_{yi}^2}\right)
 $$
 
 When maximizing the likelihood ($$\mathcal{L}$$), the log-likelihood ($$\ln(\mathcal{L})$$) is easier to work with. The reason for this is that the logarithmic product rule ($$ \log(xy) = \log(x) + \log(y) $$) turns products into sums, and sums are much easier to work with. 
@@ -35,7 +35,7 @@ $$
 
 
 $$
-\begin{equation}\label{eq:Yvector}
+\begin{equation}
 \qquad 
 \mathbf{Y}=
 \begin{bmatrix}
@@ -45,8 +45,10 @@ y_{2} \\
 y_{N}
 \end{bmatrix}
 \end{equation}
+$$
 
-\begin{equation}\label{eq:Amatrix}
+$$
+\begin{equation}
 \qquad 
 \mathbf{A}=
 \begin{bmatrix}
@@ -56,8 +58,10 @@ y_{N}
 1 & x_{N}
 \end{bmatrix}
 \end{equation}
+$$
 
-\begin{equation}\label{eq:Cmatrix}
+$$
+\begin{equation}
 \mathbf{C}=
 \begin{bmatrix}
 \sigma_{y_1}^2 & 0 & \ldots & 0 \\ 
@@ -67,6 +71,7 @@ y_{N}
 \end{bmatrix}
 \end{equation}
 $$
+
 
 git add -A
 
