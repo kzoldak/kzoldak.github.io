@@ -17,23 +17,20 @@ where $$m$$ is slope and $$b$$ is the intercept of the line.
 The likelihood is the frequencey distribution for the observables evaluated at the observed data, $$y_i$$. It is also more commonly referred to as "the likelihood of the parameters", even though it is a function of both the data and the model parameters. 
 
 $$
-\mathcal{L} = 
-$$
-
-When maximizing the likelihood (\mathcal{L}), the log-likelihood ($$\ln(\mathcal{L})$$) is easier to work with. The reason for this is that the logarithmic product rule ($$ \log(xy) = \log(x) + \log(y) $$) turns products into sums, and sums are much easier to work with. 
-
-
-
-$$
-\begin{equation}\label{eq:like}
 \mathcal{L} = \prod^N_{i=1} p(y_i | x_i, \sigma_{yi}, m, b)
-\end{equation}
 $$
 
-Equation $$\ref{eq:like}$$ is kim.
+where $$p(y_i | x_i, \sigma_{yi}, m, b)$$ is the frequencey distribution. In our case, lets use the standard normal (i.e., Gaussian) distribution.
 
 $$
-\mathcal{L_2} = \prod^N_{i=1} p(y_i | x_i, \sigma_{yi}, m, b)
+p(y_i | x_i, \sigma_{yi}, m, b) = \frac{1}{\sqrt{2\pi\sigma_{yi}^2}} \exp\left(-\frac{(y_i - (mx_i + b))^2}{2 \sigma^2}\right)
+$$
+
+When maximizing the likelihood ($$\mathcal{L}$$), the log-likelihood ($$\ln(\mathcal{L})$$) is easier to work with. The reason for this is that the logarithmic product rule ($$ \log(xy) = \log(x) + \log(y) $$) turns products into sums, and sums are much easier to work with. 
+
+
+$$
+\mathcal{L} = \prod^N_{i=1} p(y_i | x_i, \sigma_{yi}, m, b)
 $$
 
 
