@@ -10,11 +10,18 @@ These are my notes on the following paper: [Data analysis recipes: Fitting a mod
 # Linear Model
 $$\begin{align} y=mx+b \end{align}$$
 
+$$y=mx+b$$
+
+
 ${\displaystyle {\frac{1}{\sqrt{2\pi \sigma^{2}}}}e^{-{\frac {(x-\mu)^{2}}{2\sigma^{2}}}}}$
 
 
 
 # Likelihood, $\mathcal{L}$
+The likelihood is the frequencey distribution for the observables evaluated at the observed data $y_i$. It is also (more commonly) referred to as "the likelihood of the parameters". 
+
+
+
 The likelihood of the parameters. Or, the frequencey distribution for the observables evaluated at the observed data $y_i$. The likelihood is a function of both the data and the model parameters. 
 
 \begin{equaton}
