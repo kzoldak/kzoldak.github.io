@@ -6,6 +6,19 @@ comments: true
 
 These are my notes on the following paper: [Data analysis recipes: Fitting a model to data](https://arxiv.org/pdf/1008.4686.pdf).
 
+# Basic Idea of Fitting a Line to Data
+In elementry school you learn to fit a line ($$y=mx+b$$) to data by eyeballing it. You draw a line that appears to place half of the data points above it and the other half below it (with the exception of those that happen to fall directly on it), while still following the pattern of the data points on the graph. However, it is a bit more complicated (but often too advanced for elementary aged kids) than just splitting the data in half. The primal idea behind basic line fitting is that you want to __minimize the distance__ between the data points and the line. If you understand the underlying concepts of fitting a line to data, then the procedures become clear. 
+
+## Data set or sample
+A data set is a compilation of $n$ total data points, and each individual data point in the set (or sample) is identified by its $$ith$$ position in the set. Instead of introducing them as $$d_1, d_2, ..., d_n$$, we instead introduce them using their x- and y-axis dimensions; $$(x_1, y_1), (x_2, y_2), ..., (x_n, y_n)$$. When referencing an individual data point with no particular preference, we often use $$(x_i, y_i)$$. The $$(x, y)$$ coordiantes should be familiar to you since these values are what you plot on a graph; (2,6) is x=2,y=6, move to the right 2 blocks and up 6 blocks. 
+
+## Data's distribution about the line
+If our data points all fall in a perfectly straight line (which never happens in reality), then the y-axis value of each respective x-axis value will follow the linear function: $$y_i = m x_i + b$$, where $$m$$ is the slope of the line and $$b$$ is the y-intercept (or just intercept). 
+
+In reality, data points are though to be drawn from a truly straight line, but there are mechanisms that cause our observations to have uncertainties in those values. Therefore we get a set of data points which are scattered about that true line. We can't know this true line, and what we are actually doing when we fit a line to the data is attempting to estimate it (via its parameters). But we must estimate how these data points are scattered about the line, and this is done with the [normal (or Gaussian) distribution](https://en.wikipedia.org/wiki/Normal_distribution). We present the probability density function (PDF) of the normal distribution in a future section. 
+
+
+
 
 # Linear Model
 $$ 
@@ -92,12 +105,20 @@ $$
 Here we write the most basic way to present Bayes' Theorem:
 
 $$
-p(\theta \mid D, I) = \frac{p(D \mid \theta, I) p(\theta \mid I)}{p(D\mid I)}
+p(\theta\mid D, I) = \frac{p(D \mid \theta, I) \ p(\theta \mid I)}{p(D\mid I)}
 $$
 
-where $$ p(\theta \mid D, I) $$ is the posterior probability, $$p(D \mid \theta, I)$$ is the likelihood, $$ p(\theta \mid I) $$ is the prior distribution, and $$ p(D\mid I) $$ is a constant that arises from marginalizing the numerator; it can be thought of as a normalization so that the probability integrates (i.e., sums) to 1. That's all you really need to know about the denominator term. 
+where $$ p(\theta \mid D, I) $$ is the posterior probability, $$p(D \mid \theta, I)$$ is the likelihood (probability), $$ p(\theta \mid I) $$ is the prior probability distribution, and $$ p(D\mid I) $$ is a constant that arises from marginalizing the numerator over all parameters; it can be thought of as a normalization so that the posterior probability integrates (i.e., sums) to 1. That's all you really need to know about the denominator term. All terms in Bayes' theorm are probabilities. 
 
-We use $$\theta$$ to represent all the model parameters. This includes all that are free to vary during the fit, including those you care about and those you do not. $I$ is short-hand for all the prior knowledge of the $$x_i$$ and the $$\sigma_{yi}$$ and everything else about the problem. Hogg et al. notes that $$x_i$$ and $$\sigma_{yi}$$ are consumed within the prior $$I$$ because they are NOT considered the data. They explain that there is a total asymmetry between $$x_i$$ and $$y_i$$ and the $$x_i$$ are considered to be part of the experimental design. They are inputs to an experiment that gets $$y_i$$ as its output. In data science practices, the $$X$$ matrix that holds the $$x_1, x_2, ..., x_N$$ data is called the features matrix and the $$Y$$ vector that holds the $$y_1, y_2, ..., y_N$$ data is called the response vector. This is because they are not treated as data, but features and a response of the experiment. Note that in Hogg et al, the so-called features matrix is $$\mathbf{A}$$ (see their Section 1) instead of $$\mathbf{X}$$, where they use $$\mathbf{X}$$ to represent the resulting parameters. 
+We use $$\theta$$ to represent all the model parameters. This includes all that are free to vary during the fit, both those you care about and those you do not. 
+$I$ is short-hand for all the prior knowledge of the experiment, parameters and all, but holds no knowledge of the data (see prior section below since $$x_i$$ and $$\sigma_{yi}$$ are NOT treated as data here). 
+$$D$$ stands for data, which in our case is really only the $$y_1, y_2, ..., y_N$$. 
+
+
+## Prior
+$I$ is short-hand for all the prior knowledge of the $$x_i$$ and the $$\sigma_{yi}$$ and everything else about the problem. Hogg et al. notes that $$x_i$$ and $$\sigma_{yi}$$ are consumed within the prior $$I$$ because they are NOT considered the data. They explain that there is a total asymmetry between $$x_i$$ and $$y_i$$ and the $$x_i$$ are considered to be part of the experimental design. They are inputs to an experiment that gets $$y_i$$ as its output. In data science practices, the $$X$$ matrix that holds the $$x_1, x_2, ..., x_N$$ data is called the features matrix and the $$Y$$ vector that holds the $$y_1, y_2, ..., y_N$$ data is called the response vector. This is because they are not treated as data, but features and a response of the experiment. Note that in Hogg et al, the so-called features matrix is $$\mathbf{A}$$ (see their Section 1) instead of $$\mathbf{X}$$, where they use $$\mathbf{X}$$ to represent the resulting parameters instead.
+
+
 
 
 
