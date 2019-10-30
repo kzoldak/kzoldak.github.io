@@ -13,7 +13,7 @@ permalink: /statisticstools/
 [Penn State Statistics Summer School (2015, year I attended)](http://astrostatistics.psu.edu/su15/). There is a lot of useful presentations and R code to go along with them. 
 
 # Maximum Likelihood Estimation
-[Towards Data Science's MLE with a Normal Distribution[(https://towardsdatascience.com/maximum-likelihood-estimation-explained-normal-distribution-6207b322e47f)
+[Towards Data Science's MLE with a Normal Distribution](https://towardsdatascience.com/maximum-likelihood-estimation-explained-normal-distribution-6207b322e47f)
 
 [Statistical Machine Learning MLE Lecture](http://www.gatsby.ucl.ac.uk/~porbanz/teaching/W4400S14/W4400S14_01May14.pdf)
 
