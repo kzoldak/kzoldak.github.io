@@ -72,14 +72,19 @@ $$
 $$
 
 
-$$ \ln(\mathcal{L}) = -\frac{n}{2}\ln(2\pi)- n\ln \sigma - \sum \frac{(x_i-\mu)^2}{2\sigma^2} $$
+$$ \ln(\mathcal{L}) = -\frac{n}{2}\ln(2\pi)- n\ln \sigma - \sum \frac{(y_i-y_{model})^2}{2\sigma^2} $$
 
 or
 
 $$ 
-\ln(\mathcal{L}) = -\frac{1}{2} \left[ n\ln(2\pi) + 2 n \ln \sigma + \sum \left(\frac{x_i-\mu}{\sigma}\right)^2 \right]
+\ln(\mathcal{L}) = -\frac{1}{2} \left[ n\ln(2\pi) + 2 n \ln(\sigma) + \sum \left(\frac{y_i-y_{model}}{\sigma}\right)^2 \right]
 $$
 
+Since we have technically set up the probability function to be dependent on $$\sigma_{yi}$$, we should write the function as:
+
+$$ 
+\ln(\mathcal{L}) = -\frac{1}{2} \left[ n\ln(2\pi) + 2 n \ln(\sigma_{yi}) + \sum \left(\frac{y_i-y_{model}}{\sigma_{yi}}\right)^2 \right]
+$$
 
 
 
