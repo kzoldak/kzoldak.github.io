@@ -88,6 +88,19 @@ $$
 
 
 
+# Bayes' Theorem
+Here we write the most basic way to present Bayes' Theorem:
+
+$$
+p(\theta \mid D, I) = \frac{p(D \mid \theta, I) p(\theta \mid I)}{p(D\mid I)}
+$$
+
+where $$ p(\theta \mid D, I) $$ is the posterior probability, $$p(D \mid \theta, I)$$ is the likelihood, $$ p(\theta \mid I) $$ is the prior distribution, and $$ p(D\mid I) $$ is a constant that arises from marginalizing the numerator; it can be thought of as a normalization so that the probability integrates (i.e., sums) to 1. That's all you really need to know about the denominator term. 
+
+We use $$\theta$$ to represent all the model parameters. This includes all that are free to vary during the fit, including those you care about and those you do not. $I$ is short-hand for all the prior knowledge of the $$x_i$$ and the $$\sigma_{yi}$$ and everything else about the problem. Hogg et al. notes that $$x_i$$ and $$\sigma_{yi}$$ are consumed within the prior $$I$$ because they are NOT considered the data. They explain that there is a total asymmetry between $$x_i$$ and $$y_i$$ and the $$x_i$$ are considered to be part of the experimental design. They are inputs to an experiment that gets $$y_i$$ as its output. In data science practices, the $$X$$ matrix that holds the $$x_1, x_2, ..., x_N$$ data is called the features matrix and the $$Y$$ vector that holds the $$y_1, y_2, ..., y_N$$ data is called the response vector. This is because they are not treated as data, but features and a response of the experiment. Note that in Hogg et al, the so-called features matrix is $$\mathbf{A}$$ (see their Section 1) instead of $$\mathbf{X}$$, where they use $$\mathbf{X}$$ to represent the resulting parameters. 
+
+
+
 # Vector Form
 $$
 \begin{equation}
