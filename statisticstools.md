@@ -18,3 +18,8 @@ permalink: /statisticstools/
 [Statistical Machine Learning MLE Lecture](http://www.gatsby.ucl.ac.uk/~porbanz/teaching/W4400S14/W4400S14_01May14.pdf)
 
 [jrmeyer's Github Post: Maximum Likelihood Estimation of Gaussian Parameters](http://jrmeyer.github.io/machinelearning/2017/08/18/mle.html)
+
+# Bayesian Texts
+[Introduction to Applied Bayesian
+Statistics and Estimation for
+Social Scientists by Scott M. Lynch](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.177.857&rep=rep1&type=pdf)

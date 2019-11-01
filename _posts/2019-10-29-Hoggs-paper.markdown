@@ -15,7 +15,15 @@ A data set is a compilation of $n$ total data points, and each individual data p
 ## Data's distribution about the line
 If our data points all fall in a perfectly straight line (which never happens in reality), then the y-axis value of each respective x-axis value will follow the linear function: $$y_i = m x_i + b$$, where $$m$$ is the slope of the line and $$b$$ is the y-intercept (or just intercept). 
 
-In reality, data points are though to be drawn from a truly straight line, but there are mechanisms that cause our observations to have uncertainties in those values. Therefore we get a set of data points which are scattered about that true line. We can't know this true line, and what we are actually doing when we fit a line to the data is attempting to estimate it (via its parameters). But we must estimate how these data points are scattered about the line, and this is done with the [normal (or Gaussian) distribution](https://en.wikipedia.org/wiki/Normal_distribution). We present the probability density function (PDF) of the normal distribution in a future section. 
+In reality we see that data points do not fall directly on a straight line, but are scattered about it. 
+<!-- But what causes this scatter? For one, basic statistical probabilities. For example, take the first data point in our sample $$(x_1, y_1)$$. If we had the capability of making this identical observation over and over, we would see that we don't get the same exact values for $$x$$ and $$y$$ every time. This is due to statistical fluctuations. If we make the observation over and over and over again, a very large number of times, what we will see is that these observations produce a Gaussian distribution with the mean falling on the true best fit line. This is the basic idea behind the law of large numbers; as $$n\rightarrow \infty$$, the distribution of those $$n$$ observations tends toward a Gaussian. ***** SPLIT HERE *****
+In reality, data points are though to be drawn from a truly straight line, but there are mechanisms that cause our observations to have uncertainties in those values. Therefore we get a set of data points which are scattered about that true line. We can't know this true line, and what we are actually doing when we fit a line to the data is attempting to estimate it (via its parameters).  -->
+
+To properly represent this scatter, we use the [normal (or Gaussian) distribution](https://en.wikipedia.org/wiki/Normal_distribution). We present the probability density function (PDF) of the normal distribution in a future section. 
+
+
+For any given x-axis value of a data point (which should represent some physical knowledge of an observation), there are actually a large number of possibilities for the resulting value of $$y$$. And that is because of this Gaussian distribution. The law of large numbers states that if $$n\rightarrow \infty$$, then the distribution of all $$n$$ tends toward a Gaussian distribution. 
+
 
 
 
@@ -104,6 +112,8 @@ $$
 # Bayes' Theorem
 Here we write the most basic way to present Bayes' Theorem:
 
+
+
 $$
 p(\theta\mid D, I) = \frac{p(D \mid \theta, I) \ p(\theta \mid I)}{p(D\mid I)}
 $$
@@ -113,6 +123,8 @@ where $$ p(\theta \mid D, I) $$ is the posterior probability, $$p(D \mid \theta,
 We use $$\theta$$ to represent all the model parameters. This includes all that are free to vary during the fit, both those you care about and those you do not. 
 $I$ is short-hand for all the prior knowledge of the experiment, parameters and all, but holds no knowledge of the data (see prior section below since $$x_i$$ and $$\sigma_{yi}$$ are NOT treated as data here). 
 $$D$$ stands for data, which in our case is really only the $$y_1, y_2, ..., y_N$$. 
+
+As stated in short by Hogg et al.: "the posterior probability distribution is the likelihood times the prior, properly normalized." 
 
 
 ## Prior
