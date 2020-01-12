@@ -8,7 +8,9 @@ comments: true
 In elementry school you learn to fit a line ($$y=mx+b$$) to data by eyeballing it. You draw a line that appears to place half of the data points above it and the other half below it (with the exception of those that happen to fall directly on it), while still following the pattern of the data points on the graph. However, it is a bit more complicated (but often too advanced for elementary aged kids) than just splitting the data in half. The primal idea behind basic line fitting is that you want to __minimize the distance__ between the data points and the line. If you understand the underlying concepts of fitting a line to data, then the procedures become clear. 
 
 ## Data set or sample
-A data set is a compilation of $$n$$ total data points, and each individual data point in the set (or sample) is identified by its $$ith$$ position in the set. Instead of introducing them as $$d_1, d_2, ..., d_n$$, we instead introduce them using their x- and y-axis dimensions; $$(x_1, y_1), (x_2, y_2), ..., (x_n, y_n)$$. When referencing an individual data point with no particular preference, we often use $$(x_i, y_i)$$. The $$(x, y)$$ coordiantes should be familiar to you since these values are what you plot on a graph; (2,6) is x=2,y=6, move to the right 2 blocks and up 6 blocks. 
+A data set is a compilation of $$n$$ total data points, and each individual data point in the set (or sample) is identified by its $$ith$$ position in the set. Instead of introducing them as $$d_1, d_2, ..., d_n$$, we instead introduce them using their x- and y-axis dimensions; $$(x_1, y_1), (x_2, y_2), ..., (x_n, y_n)$$. When referencing an individual data point with no particular preference, we often use $$(x_i, y_i)$$. The $$(x, y)$$ coordiantes should be familiar to you since these values are what you plot on a graph; e.g., (2,6) is x=2,y=6. 
+
+
 
 ## Data's distribution about the line
 If our data points all fall in a perfectly straight line (which never happens in reality), then the y-axis value of each respective x-axis value will follow the linear function perfectly. The equation of a line is given by
@@ -18,6 +20,19 @@ $$y_i = m x_i + b ,$$
 where $$m$$ is the slope of the line and $$b$$ is the y-intercept (or just intercept). 
 In reality, the data points fall off of the line, randomly scattered about it. Thus, it is our job to determine what probability distribution is responsible for creating this scatter in the data. Once this distribution is known, we can draw more data sets from it. 
 
+
+$$
+\begin{equation}
+\qquad 
+\mathbf{d}=
+\begin{bmatrix}
+x_{1}, y_{1} \\
+x_{2}, y_{2} \\
+\vdots \\
+x_{N}, y_{N}
+\end{bmatrix}
+\end{equation}
+$$
 
 
 <!-- But what causes this scatter? For one, basic statistical probabilities. For example, take the first data point in our sample $$(x_1, y_1)$$. If we had the capability of making this identical observation over and over, we would see that we don't get the same exact values for $$x$$ and $$y$$ every time. This is due to statistical fluctuations. If we make the observation over and over and over again, a very large number of times, what we will see is that these observations produce a Gaussian distribution with the mean falling on the true best fit line. This is the basic idea behind the law of large numbers; as $$n\rightarrow \infty$$, the distribution of those $$n$$ observations tends toward a Gaussian. ***** SPLIT HERE *****
