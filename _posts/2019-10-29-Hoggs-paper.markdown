@@ -38,7 +38,14 @@ $$
 is the statistic to be minimized during the fitting process. The quotient, $$\left(\frac{x_i-\mu}{\sigma} \right)$$, measures the deviation of $$x$$ from its expected value ($$\mu$$) in units of $$\sigma$$. Thus, $$\sigma$$ defines a length, and this is why minimizing $$\chi^2$$ of a fit gives a metric distance in data space. 
 
 In linear regression, we replace $$x_i$$ with $$y_i$$ and $$\mu$$ with $$y_{model, i}$$ (or $$m x_i + b$$, since the equation of our model is a line). Our $$\sigma$$ becomes $$\sigma_{y_i}$$, the uncertainty on $$y_i$$. 
-The $$y_{model, i}$$ is the y-axis value that is estimated for each of the $$ith$$ values of x ($$x_i$$) in our data set, given the best-fit model and its parameters (the slope and intercept). If we plot our $$x_i$$ data verses $$y_{model, i}$$, we get a straight line, as we should. Therefore it makes sence that $$y_{model, i}$$ replaces $$\mu$$, a variable used to define the distribution's mean. The best-fit model's y-axis values (given by $$y_{model, i}$$) ARE the mean of the distribution that the data points are drawn from; at least the mean of the Gaussian distribution that is oriented along the y-axis of each $$ith$$ data point. 
+
+The $$y_{model, i}$$ is the y-axis value that is estimated for each $$x_i$$ in our data set, given the best-fit model and its parameters (slope and intercept). If we plot $$x_i$$ verses $$y_{model, i}$$, we get a straight line, as we should. Therefore it makes sence that $$y_{model, i}$$ replaces $$\mu$$, a variable used to define the mean of a distribution. 
+
+Acutally, $$y_{model, i}$$ are the means of each data point's statistical probability distributions. The scatter of the data about the linear model can be thought of as the data points being drawn from their own probability distributions. Each $$ith$$ data point was drawn from its own Gaussian distribution (oriented in the y-direction), and $$y_{model,i}$$ at $$x_i$$ is the mean of the $$ith$$ probability distribution. In the simplest form of linear regression, we only work with vertical (y-direction) offsets of the data from the model, hence why we stress these distributions are oriented along the y-axis. 
+
+<!-- The scatter of the data about the linear model can be thought of as the data points being drawn from their own probability distributions (Gaussian). Each $$ith$$ data point was drawn from its own Gaussian distribution (oriented in the y-direction), and $$y_{model,i}$$ at $$x_i$$ is the mean of that distribution. 
+
+The best-fit model's y-axis values (given by $$y_{model, i}$$) ARE the mean of the distribution that the data points are drawn from; at least the mean of the Gaussian distribution that is oriented along the y-axis of each $$ith$$ data point.  -->
 
 Note that it is not uncommon to see different variable names used to represent slope and intercept. $$a$$ is commonly used for slope. 
 
