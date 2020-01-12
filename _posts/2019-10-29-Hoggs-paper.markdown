@@ -15,7 +15,7 @@ where $$m$$ is slope and $$b$$ is the intercept of the line.
 
 
 # Gaussian Distribution's PDF
-For this work we will assume that the data $$(x_i, y_i)$$ were drawn from a normal distribution (or Gaussian) with zero mean and known variance of $$\sigma_{yi}^2$$ about the model. The normal distribution's probability function (as given by [its Wikipedia Page](https://en.wikipedia.org/wiki/Normal_distribution)) is: 
+For this work we will assume that the data $$(x_i, y_i)$$ were drawn from a normal distribution (or Gaussian) with zero mean and known variance of $$\sigma_{y_i}^2$$ about the model. The normal distribution's probability function (as given by [its Wikipedia Page](https://en.wikipedia.org/wiki/Normal_distribution)) is: 
 
 $$
 {\displaystyle f(x\mid \mu ,\sigma ^{2})={\frac {1}{\sqrt {2\pi \sigma ^{2}}}}e^{-{\frac {(x-\mu )^{2}}{2\sigma ^{2}}}}}
@@ -37,26 +37,26 @@ $$
 
 is the statistic to be minimized during the fitting process. The quotient, $$\left(\frac{x_i-\mu}{\sigma} \right)$$, measures the deviation of $$x$$ from its expected value ($$\mu$$) in units of $$\sigma$$. Thus, $$\sigma$$ defines a length, and this is why minimizing $$\chi^2$$ of a fit gives a metric distance in data space. 
 
-In linear regression, we replace $$x_i$$ with $$y_i$$ and $$\mu$$ with $$y_{model}$$ (or $$m x_i + b$$, since the equation of our model is a line). Our $$\sigma$$ becomes $$\sigma_{y_i}$$, the uncertainty on $$y_i$$. 
-The $$y_{model}$$ is the y-axis value that is estimated for each value of $$x_i$$, given the best-fit model parameters (the slope and intercept). If we plot our $$x_i$$ data verses $$y_{model, i}$$, we get a straight line, as we should. Therefore it makes sence that $$y_{model}$$ replaces $$\mu$$, a variable used to define the distribution's mean. The best-fit model's y-axis values (given by $$y_{model, i}$$) ARE the mean of the distribution that the data points are drawn from; at least the mean of the Gaussian distribution that is oriented along the y-axis of each $$ith$$ data point. 
+In linear regression, we replace $$x_i$$ with $$y_i$$ and $$\mu$$ with $$y_{model, i}$$ (or $$m x_i + b$$, since the equation of our model is a line). Our $$\sigma$$ becomes $$\sigma_{y_i}$$, the uncertainty on $$y_i$$. 
+The $$y_{model, i}$$ is the y-axis value that is estimated for each of the $$ith$$ values of x ($$x_i$$) in our data set, given the best-fit model and its parameters (the slope and intercept). If we plot our $$x_i$$ data verses $$y_{model, i}$$, we get a straight line, as we should. Therefore it makes sence that $$y_{model, i}$$ replaces $$\mu$$, a variable used to define the distribution's mean. The best-fit model's y-axis values (given by $$y_{model, i}$$) ARE the mean of the distribution that the data points are drawn from; at least the mean of the Gaussian distribution that is oriented along the y-axis of each $$ith$$ data point. 
 
 Note that it is not uncommon to see different variable names used to represent slope and intercept. $$a$$ is commonly used for slope. 
 
 We now have:
 
 $$
-f(y_i \mid x_i, \sigma_{yi}, m, b) = \frac{1}{\sqrt{2\pi\sigma_{yi}^2}} \exp\left(-\frac{\left[y_i - y_{model}\right]^2}{2 \sigma_{yi}^2}\right) 
+f(y_i \mid x_i, \sigma_{y_i}, m, b) = \frac{1}{\sqrt{2\pi\sigma_{y_i}^2}} \exp\left(-\frac{\left[y_i - y_{model,i}\right]^2}{2 \sigma_{y_i}^2}\right) 
 $$
 
 $$
-f(y_i \mid x_i, \sigma_{yi}, m, b) = \frac{1}{\sqrt{2\pi\sigma_{yi}^2}} \exp\left(-\frac{\left[y_i - (mx_i + b)\right]^2}{2 \sigma_{yi}^2}\right) 
+f(y_i \mid x_i, \sigma_{y_i}, m, b) = \frac{1}{\sqrt{2\pi\sigma_{y_i}^2}} \exp\left(-\frac{\left[y_i - (mx_i + b)\right]^2}{2 \sigma_{y_i}^2}\right) 
 $$
 
 $$
-f(y_i \mid x_i, \sigma_{yi}, m, b) = \frac{1}{\sqrt{2\pi\sigma_{yi}^2}} \exp\left(-\frac{\left[y_i - mx_i - b)\right]^2}{2 \sigma_{yi}^2}\right) 
+f(y_i \mid x_i, \sigma_{y_i}, m, b) = \frac{1}{\sqrt{2\pi\sigma_{y_i}^2}} \exp\left(-\frac{\left[y_i - mx_i - b)\right]^2}{2 \sigma_{y_i}^2}\right) 
 $$
 
-<!-- Note that $$f(y_i \mid x_i, \sigma_{yi}, m, b)$$ can be written as $$p(y_i \mid x_i, \sigma_{yi}, m, b)$$, since it is a probability distribution; the probability of $$y_i$$ given the $$x_i$$ and model parameters.  -->
+<!-- Note that $$f(y_i \mid x_i, \sigma_{y_i}, m, b)$$ can be written as $$p(y_i \mid x_i, \sigma_{y_i}, m, b)$$, since it is a probability distribution; the probability of $$y_i$$ given the $$x_i$$ and model parameters.  -->
 
 
 
@@ -64,8 +64,8 @@ $$
 
 
 
-In maximum likelihood analysis, our f(y_i \mid x_i, \sigma_{yi}, m, b) becomes our maximum likelihood statistic. 
-becomes p(y_i \mid x_i, \sigma_{yi}, m, b), as it is a probability function; the probability of $$y_i$$ given the $$x_i$$ and model parameters.
+In maximum likelihood analysis, our f(y_i \mid x_i, \sigma_{y_i}, m, b) becomes our maximum likelihood statistic. 
+becomes p(y_i \mid x_i, \sigma_{y_i}, m, b), as it is a probability function; the probability of $$y_i$$ given the $$x_i$$ and model parameters.
 
 
 <!-- Notice that we also replaced f with p to match Hogg et al's paper. This helps to remind us that this function is representative of the probability of $$y_i$$ given the $$x_i$$ and model parameters. 
@@ -81,13 +81,13 @@ becomes p(y_i \mid x_i, \sigma_{yi}, m, b), as it is a probability function; the
 The likelihood is the frequencey distribution for the observables evaluated at the observed data, $$y_i$$. It is also more commonly referred to as "the likelihood of the parameters", even though it is a function of both the data and the model parameters. The likelihood function is given by:
 
 $$
-\mathcal{L} = \prod^N_{i=1} p(y_i \mid x_i, \sigma_{yi}, m, b)
+\mathcal{L} = \prod^N_{i=1} p(y_i \mid x_i, \sigma_{y_i}, m, b)
 $$
 
-where $$ p(y_i \mid x_i, \sigma_{yi}, m, b) $$ is the frequencey distribution (or the probability distribution we presented above) for Gaussian distributed data about a linear model. 
+where $$ p(y_i \mid x_i, \sigma_{y_i}, m, b) $$ is the frequencey distribution (or the probability distribution we presented above) for Gaussian distributed data about a linear model. 
 Plugging it into the likelihood:
 $$
-\mathcal{L} = \prod^N_{i=1} \frac{1}{\sqrt{2\pi\sigma_{yi}^2}} \exp\left(-\frac{(y_i - mx_i - b)^2}{2 \sigma_{yi}^2}\right) .
+\mathcal{L} = \prod^N_{i=1} \frac{1}{\sqrt{2\pi\sigma_{y_i}^2}} \exp\left(-\frac{(y_i - mx_i - b)^2}{2 \sigma_{y_i}^2}\right) .
 $$
 
 
@@ -96,7 +96,7 @@ When performing maximum likelihood estimation, the log-likelihood ($$\ln(\mathca
 
 
 $$
-\ln(\mathcal{L}) = \sum^N_{i=1} p(y_i | x_i, \sigma_{yi}, m, b)
+\ln(\mathcal{L}) = \sum^N_{i=1} p(y_i | x_i, \sigma_{y_i}, m, b)
 $$
 
 
@@ -108,10 +108,10 @@ $$
 \ln(\mathcal{L}) = -\frac{1}{2} \left[ n\ln(2\pi) + 2 n \ln(\sigma) + \sum \left(\frac{y_i-y_{model}}{\sigma}\right)^2 \right]
 $$
 
-Since we have technically set up the probability function to be dependent on $$\sigma_{yi}$$, we should write the function as:
+Since we have technically set up the probability function to be dependent on $$\sigma_{y_i}$$, we should write the function as:
 
 $$ 
-\ln(\mathcal{L}) = -\frac{1}{2} \left[ n\ln(2\pi) + 2 n \ln(\sigma_{yi}) + \sum \left(\frac{y_i-y_{model}}{\sigma_{yi}}\right)^2 \right]
+\ln(\mathcal{L}) = -\frac{1}{2} \left[ n\ln(2\pi) + 2 n \ln(\sigma_{y_i}) + \sum \left(\frac{y_i-y_{model}}{\sigma_{y_i}}\right)^2 \right]
 $$
 
 
@@ -127,20 +127,20 @@ $$
 where $$ p(\theta \mid D, I) $$ is the posterior probability, $$p(D \mid \theta, I)$$ is the likelihood (probability), $$ p(\theta \mid I) $$ is the prior probability distribution, and $$ p(D\mid I) $$ is a constant that arises from marginalizing the numerator over all parameters; it can be thought of as a normalization so that the posterior probability integrates (i.e., sums) to 1. That's all you really need to know about the denominator term. 
 
 We use $$\theta$$ to represent all the model parameters. This includes all that are free to vary during the fit, both those you care about and those you do not. 
-$I$ is short-hand for all the prior knowledge of the experiment, parameters and all, but holds no knowledge of the data (see prior section below since $$x_i$$ and $$\sigma_{yi}$$ are NOT treated as data here). 
+$I$ is short-hand for all the prior knowledge of the experiment, parameters and all, but holds no knowledge of the data (see prior section below since $$x_i$$ and $$\sigma_{y_i}$$ are NOT treated as data here). 
 $$D$$ stands for data, which in our case is really only the $$y_1, y_2, ..., y_N$$. 
 
 As stated in short by Hogg et al.: "the posterior probability distribution is the likelihood times the prior, properly normalized." 
 
 
 ## Prior
-$I$ is short-hand for all the prior knowledge of the $$x_i$$ and the $$\sigma_{yi}$$ and everything else about the problem. Hogg et al. notes that $$x_i$$ and $$\sigma_{yi}$$ are consumed within the prior $$I$$ because they are NOT considered the data. They explain that there is a total asymmetry between $$x_i$$ and $$y_i$$ and the $$x_i$$ are considered to be part of the experimental design. They are inputs to an experiment that gets $$y_i$$ as its output. In data science practices, the $$X$$ matrix that holds the $$x_1, x_2, ..., x_N$$ data is called the features matrix and the $$Y$$ vector that holds the $$y_1, y_2, ..., y_N$$ data is called the response vector. This is because they are not treated as data, but features and a response of the experiment. Note that in Hogg et al, the so-called features matrix is $$\mathbf{A}$$ (see their Section 1) instead of $$\mathbf{X}$$, where they use $$\mathbf{X}$$ to represent the resulting parameters instead.
+$I$ is short-hand for all the prior knowledge of the $$x_i$$ and the $$\sigma_{y_i}$$ and everything else about the problem. Hogg et al. notes that $$x_i$$ and $$\sigma_{y_i}$$ are consumed within the prior $$I$$ because they are NOT considered the data. They explain that there is a total asymmetry between $$x_i$$ and $$y_i$$ and the $$x_i$$ are considered to be part of the experimental design. They are inputs to an experiment that gets $$y_i$$ as its output. In data science practices, the $$X$$ matrix that holds the $$x_1, x_2, ..., x_N$$ data is called the features matrix and the $$Y$$ vector that holds the $$y_1, y_2, ..., y_N$$ data is called the response vector. This is because they are not treated as data, but features and a response of the experiment. Note that in Hogg et al, the so-called features matrix is $$\mathbf{A}$$ (see their Section 1) instead of $$\mathbf{X}$$, where they use $$\mathbf{X}$$ to represent the resulting parameters instead.
 
 
 # Terms and Ideas
 
 ## Prior
-$I$ is short-hand for all the prior knowledge of the $$x_i$$ and the $$\sigma_{yi}$$ and everything else about the problem. Hogg et al. notes that $$x_i$$ and $$\sigma_{yi}$$ are consumed within the prior $$I$$ because they are NOT considered the data. They explain that there is a total asymmetry between $$x_i$$ and $$y_i$$ and the $$x_i$$ are considered to be part of the experimental design. They are inputs to an experiment that gets $$y_i$$ as its output. In data science practices, the $$X$$ matrix that holds the $$x_1, x_2, ..., x_N$$ data is called the features matrix and the $$Y$$ vector that holds the $$y_1, y_2, ..., y_N$$ data is called the response vector. This is because they are not treated as data, but features and a response of the experiment. Note that in Hogg et al, the so-called features matrix is $$\mathbf{A}$$ (see their Section 1) instead of $$\mathbf{X}$$, where they use $$\mathbf{X}$$ to represent the resulting parameters instead.
+$I$ is short-hand for all the prior knowledge of the $$x_i$$ and the $$\sigma_{y_i}$$ and everything else about the problem. Hogg et al. notes that $$x_i$$ and $$\sigma_{y_i}$$ are consumed within the prior $$I$$ because they are NOT considered the data. They explain that there is a total asymmetry between $$x_i$$ and $$y_i$$ and the $$x_i$$ are considered to be part of the experimental design. They are inputs to an experiment that gets $$y_i$$ as its output. In data science practices, the $$X$$ matrix that holds the $$x_1, x_2, ..., x_N$$ data is called the features matrix and the $$Y$$ vector that holds the $$y_1, y_2, ..., y_N$$ data is called the response vector. This is because they are not treated as data, but features and a response of the experiment. Note that in Hogg et al, the so-called features matrix is $$\mathbf{A}$$ (see their Section 1) instead of $$\mathbf{X}$$, where they use $$\mathbf{X}$$ to represent the resulting parameters instead.
 
 
 <!-- ***marginalisation:***  -->
