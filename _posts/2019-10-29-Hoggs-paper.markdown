@@ -110,7 +110,9 @@ $I$ is short-hand for all the prior knowledge of the $$x_i$$ and the $$\sigma_{y
 
 
 # Bayesian Terms
-\textbf{\texit{prior:}}   
+***prior:***  
+
+***marginalisation:*** In probability it refers to ``summing out'' the probability of random variables given the joint probability distribution of other variables. It requires a measure on your data. Given by priors. Marginalization is a Bayesian technique. 
 
 
 
