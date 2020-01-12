@@ -5,15 +5,15 @@ comments: true
 ---
 
 # Data set or sample
-A data set is a compilation of $$n$$ number of data points, each having an x-axis and y-axis value: $$(x_1, y_1), (x_2, y_2), ..., (x_n, y_n)$$. The data set makes up a list of data points, and with lists we often refer to an arbitrary location within it as the $$ith$$ posision or $$ith$$ variable. Thus, in our data set, any arbitrary data point will be referred to as the $$ith$$ data point and this is presented with an $$i$$ subscript (e.g., $$(x_i, y_i)$$). Thus, our data runs from position $$i=1$$ to $$i=n$$. This notation is popular in math, statistics, and physics. Say you have a list of $$n=5$$ data points and you want to sum over their x-axis values. Expanded, this would be written as:
-$$x_1 + x_2 + x_3 + x_4 + x_5$$ or $$x_1 + x_2 + ... + x_5$$, but in compact form it is shown using a summation sign:
+A data set is a compilation of $$n$$ number of data points, each having an x-axis and y-axis value: $$(x_1, y_1), (x_2, y_2), ..., (x_n, y_n)$$. The data set makes up a list of data points, and with lists we often refer to an arbitrary location as the $$ith$$ posision. Similarly, in our data set, any arbitrary data point is referred to as the $$ith$$ data point and is subscripted with an $$i$$ (e.g., $$(x_i, y_i)$$). Thus, our data set runs from position $$i=1$$ to $$i=n$$. This notation is popular all areas of math, statistics, and physics. For example of its usage, say you have a list of $$n=5$$ data points and you want to sum over their x-axis values. Expanded, this would be written as:
+$$x_1 + x_2 + x_3 + x_4 + x_5$$ or $$x_1 + x_2 + ... + x_5$$, but in compact form it is shown with a summation sign:
 $$
 \begin{equation}
 \sum_{i=1}^{n=5} x_i .
 \end{equation}
 $$
 
-In a more general form these are presented as:
+In more general terms these are:
 $$x_1 + x_2 + ... + x_n$$ and 
 $$
 \begin{equation}
