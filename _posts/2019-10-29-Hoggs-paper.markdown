@@ -7,14 +7,15 @@ comments: true
 These are my notes on the following paper: [Data analysis recipes: Fitting a model to data](https://arxiv.org/pdf/1008.4686.pdf).
 
 
-# Linear Model
+Linear Model
+---
 $$ 
 y=mx+b 
 $$
 where $$m$$ is slope and $$b$$ is the intercept of the line. 
 
 
-# Gaussian Distribution's PDF
+## Gaussian Distribution's PDF
 For this work we will assume that the data $$(x_i, y_i)$$ were drawn from a normal distribution (or Gaussian) with zero mean and known variance of $$\sigma_{y_i}^2$$ about the model. The normal distribution's probability function (as given by [its Wikipedia Page](https://en.wikipedia.org/wiki/Normal_distribution)) is: 
 
 $$
@@ -66,13 +67,11 @@ $$
 <!-- Note that $$f(y_i \mid x_i, \sigma_{y_i}, m, b)$$ can be written as $$p(y_i \mid x_i, \sigma_{y_i}, m, b)$$, since it is a probability distribution; the probability of $$y_i$$ given the $$x_i$$ and model parameters.  -->
 
 
+In linear regression with Gaussian distributed data, this becomes our maximum likelihood statistic. 
 
 
-
-
-
-In maximum likelihood analysis, our f(y_i \mid x_i, \sigma_{y_i}, m, b) becomes our maximum likelihood statistic. 
-becomes p(y_i \mid x_i, \sigma_{y_i}, m, b), as it is a probability function; the probability of $$y_i$$ given the $$x_i$$ and model parameters.
+<!-- In maximum likelihood analysis, our f(y_i \mid x_i, \sigma_{y_i}, m, b) becomes our maximum likelihood statistic. 
+becomes p(y_i \mid x_i, \sigma_{y_i}, m, b), as it is a probability function; the probability of $$y_i$$ given the $$x_i$$ and model parameters. -->
 
 
 <!-- Notice that we also replaced f with p to match Hogg et al's paper. This helps to remind us that this function is representative of the probability of $$y_i$$ given the $$x_i$$ and model parameters. 
@@ -84,7 +83,8 @@ becomes p(y_i \mid x_i, \sigma_{y_i}, m, b), as it is a probability function; th
 
 
 
-# Likelihood, $$\mathcal{L}$$
+# Maximum Likelihood
+# The Likelihood (and Log-Likelihood) Statistic, $$\mathcal{L}$$
 The likelihood is the frequencey distribution for the observables evaluated at the observed data, $$y_i$$. It is also more commonly referred to as "the likelihood of the parameters", even though it is a function of both the data and the model parameters. The likelihood function is given by:
 
 $$
