@@ -30,9 +30,11 @@ f(x\mid \mu, \sigma^{2}) = \frac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{1}{2} \chi^
 $$
 
 where $$\chi^2$$
+
 $$
 \chi^2 = \sum_{i=1}^{N} \left(\frac{x_i-\mu}{\sigma} \right)^2
 $$
+
 is the statistic to be minimized during the fitting process. The quotient, $$\left(\frac{x_i-\mu}{\sigma} \right)$$, measures the deviation of $$x$$ from its expected value ($$\mu$$) in units of $$\sigma$$. Thus, $$\sigma$$ defines a length, and this is why minimizing $$\chi^2$$ of a fit gives a metric distance in data space. 
 
 In linear regression, we replace $$x_i$$ with $$y_i$$ and $$\mu$$ with $$y_{model}$$ (or $$m x_i + b$$, since the equation of our model is a line). Our $$\sigma$$ becomes $$\sigma_{y_i}$$, the uncertainty on $$y_i$$. 
