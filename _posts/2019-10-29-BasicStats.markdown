@@ -4,22 +4,26 @@ title: "Basic Stats."
 comments: true
 ---
 
-# Basic Idea of Fitting a Line to Data
-In elementry school you learn to fit a line ($$y=mx+b$$) to data by eyeballing it. You draw a line that appears to place half of the data points above it and the other half below it (with the exception of those that happen to fall directly on it), while still following the pattern of the data points on the graph. However, it is a bit more complicated (but often too advanced for elementary aged kids) than just splitting the data in half. The primal idea behind basic line fitting is that you want to __minimize the distance__ between the data points and the line. If you understand the underlying concepts of fitting a line to data, then the procedures become clear. 
+# Data set or sample
+A data set is a compilation of $$n$$ number of data points, each having an x-axis and y-axis value: $$(x_1, y_1), (x_2, y_2), ..., (x_n, y_n)$$. The data set makes up a list of data points, and with lists we often refer to an arbitrary location within it as the $$ith$$ posision or $$ith$$ variable. Thus, in our data set, any arbitrary data point will be referred to as the $$ith$$ data point and this is presented with an $$i$$ subscript (e.g., $$x_i, y_i$$). Thus, our data runs from position $$i=1$$ to $$i=n$$. This notation is popular in physics. Say you have a list of $$n=5$$ data points and you want to sum over their x-axis values. Expanded, this would be written as:
+$$x_1 + x_2 + x_3 + x_4 + x_5$$ or $$x_1 + x_2 + ... + x_5$$, but in compact form it is shown using a summation sign:
+$$
+\begin{equation}
+\sum_{i=1}^{n=5} x_i .
+\end{equation}
+$$
 
-## Data set or sample
-A data set is a compilation of $$n$$ total data points, and each individual data point in the set (or sample) is identified by its $$ith$$ position in the set. Instead of introducing them as $$d_1, d_2, ..., d_n$$, we instead introduce them using their x- and y-axis dimensions; $$(x_1, y_1), (x_2, y_2), ..., (x_n, y_n)$$. When referencing an individual data point with no particular preference, we often use $$(x_i, y_i)$$. The $$(x, y)$$ coordiantes should be familiar to you since these values are what you plot on a graph; e.g., (2,6) is x=2,y=6. 
+In a more general form these are presented as:
+$$x_1 + x_2 + ... + x_n$$ and 
+$$
+\begin{equation}
+\sum_{i=1}^{n} x_i .
+\end{equation}
+$$
 
 
 
-## Data's distribution about the line
-If our data points all fall in a perfectly straight line (which never happens in reality), then the y-axis value of each respective x-axis value will follow the linear function perfectly. The equation of a line is given by
-
-$$y_i = m x_i + b ,$$ 
-
-where $$m$$ is the slope of the line and $$b$$ is the y-intercept (or just intercept). 
-In reality, the data points fall off of the line, randomly scattered about it. Thus, it is our job to determine what probability distribution is responsible for creating this scatter in the data. Once this distribution is known, we can draw more data sets from it. 
-
+<!-- and each individual data point in the set (or sample) is identified by its $$ith$$ position in the set. Instead of introducing them as $$d_1, d_2, ..., d_n$$, we instead introduce them using their x- and y-axis dimensions; $$(x_1, y_1), (x_2, y_2), ..., (x_n, y_n)$$. When referencing an individual data point with no particular preference, we often use $$(x_i, y_i)$$. The $$(x, y)$$ coordiantes should be familiar to you since these values are what you plot on a graph; e.g., (2,6) is x=2,y=6. 
 
 $$
 \begin{equation}
@@ -32,11 +36,27 @@ x_{2}, y_{2} \\
 x_{N}, y_{N}
 \end{bmatrix}
 \end{equation}
-$$
-
+$$ -->
 
 <!-- But what causes this scatter? For one, basic statistical probabilities. For example, take the first data point in our sample $$(x_1, y_1)$$. If we had the capability of making this identical observation over and over, we would see that we don't get the same exact values for $$x$$ and $$y$$ every time. This is due to statistical fluctuations. If we make the observation over and over and over again, a very large number of times, what we will see is that these observations produce a Gaussian distribution with the mean falling on the true best fit line. This is the basic idea behind the law of large numbers; as $$n\rightarrow \infty$$, the distribution of those $$n$$ observations tends toward a Gaussian. ***** SPLIT HERE *****
 In reality, data points are though to be drawn from a truly straight line, but there are mechanisms that cause our observations to have uncertainties in those values. Therefore we get a set of data points which are scattered about that true line. We can't know this true line, and what we are actually doing when we fit a line to the data is attempting to estimate it (via its parameters).  -->
+
+
+
+# Data's distribution about the line
+If our data points all fall in a perfectly straight line (which never happens in reality), then the y-axis value of each respective x-axis value will follow the linear function perfectly. The equation of a line is given by
+
+$$y_i = m x_i + b ,$$ 
+
+where $$m$$ is the slope of the line and $$b$$ is the y-intercept (or just intercept). 
+In reality, the data points fall off of the line, randomly scattered about it. Thus, it is our job to determine what probability distribution is responsible for creating this scatter in the data. Once this distribution is known, we can draw more data sets from it. 
+
+
+
+# Basic Idea of Fitting a Line to Data
+In elementry school you learn to fit a line ($$y=mx+b$$) to data by eyeballing it. You draw a line that appears to place half of the data points above it and the other half below it (with the exception of those that happen to fall directly on it), while still following the pattern of the data points on the graph. However, it is a bit more complicated (but often too advanced for elementary aged kids) than just splitting the data in half. The primal idea behind basic line fitting is that you want to __minimize the distance__ between the data points and the line. If you understand the underlying concepts of fitting a line to data, then the procedures become clear. 
+
+
 
 
 
