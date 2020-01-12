@@ -1,20 +1,37 @@
 ---
 layout: post
-title: "Fitting a model to data."
+title: "Basic Stats."
 comments: true
 ---
 
-These are my notes on the following paper: [Data analysis recipes: Fitting a model to data](https://arxiv.org/pdf/1008.4686.pdf).
+# Basic Idea of Fitting a Line to Data
+In elementry school you learn to fit a line ($$y=mx+b$$) to data by eyeballing it. You draw a line that appears to place half of the data points above it and the other half below it (with the exception of those that happen to fall directly on it), while still following the pattern of the data points on the graph. However, it is a bit more complicated (but often too advanced for elementary aged kids) than just splitting the data in half. The primal idea behind basic line fitting is that you want to __minimize the distance__ between the data points and the line. If you understand the underlying concepts of fitting a line to data, then the procedures become clear. 
+
+## Data set or sample
+A data set is a compilation of $n$ total data points, and each individual data point in the set (or sample) is identified by its $$ith$$ position in the set. Instead of introducing them as $$d_1, d_2, ..., d_n$$, we instead introduce them using their x- and y-axis dimensions; $$(x_1, y_1), (x_2, y_2), ..., (x_n, y_n)$$. When referencing an individual data point with no particular preference, we often use $$(x_i, y_i)$$. The $$(x, y)$$ coordiantes should be familiar to you since these values are what you plot on a graph; (2,6) is x=2,y=6, move to the right 2 blocks and up 6 blocks. 
+
+## Data's distribution about the line
+If our data points all fall in a perfectly straight line (which never happens in reality), then the y-axis value of each respective x-axis value will follow the linear function perfectly. The equation of a line is given by
+
+$$y_i = m x_i + b ,$$ 
+
+where $$m$$ is the slope of the line and $$b$$ is the y-intercept (or just intercept). 
+In reality, the data points fall off of the line, randomly scattered about it. Thus, it is our job to determine what probability distribution is responsible for creating this scatter in the data. Once this distribution is known, we can draw more data sets from it. 
 
 
-# Linear Model
-$$ 
-y=mx+b 
-$$
-where $$m$$ is slope and $$b$$ is the intercept of the line. 
+
+<!-- But what causes this scatter? For one, basic statistical probabilities. For example, take the first data point in our sample $$(x_1, y_1)$$. If we had the capability of making this identical observation over and over, we would see that we don't get the same exact values for $$x$$ and $$y$$ every time. This is due to statistical fluctuations. If we make the observation over and over and over again, a very large number of times, what we will see is that these observations produce a Gaussian distribution with the mean falling on the true best fit line. This is the basic idea behind the law of large numbers; as $$n\rightarrow \infty$$, the distribution of those $$n$$ observations tends toward a Gaussian. ***** SPLIT HERE *****
+In reality, data points are though to be drawn from a truly straight line, but there are mechanisms that cause our observations to have uncertainties in those values. Therefore we get a set of data points which are scattered about that true line. We can't know this true line, and what we are actually doing when we fit a line to the data is attempting to estimate it (via its parameters).  -->
 
 
-# Gaussian Distribution's PDF
+
+
+# Gaussian Probability Density Function (PDF)
+To properly represent this scatter, we use the [normal (or Gaussian) distribution](https://en.wikipedia.org/wiki/Normal_distribution). We present the probability density function (PDF) of the normal distribution in a future section. 
+
+For any given x-axis value of a data point (which should represent some physical knowledge of an observation), there are actually a large number of possibilities for the resulting value of $$y$$. And that is because of this Gaussian distribution. The law of large numbers states that if $$n\rightarrow \infty$$, then the distribution of all $$n$$ tends toward a Gaussian distribution. 
+
+
 For this work we will assume that the data $$(x_i, y_i)$$ were drawn from a normal distribution (or Gaussian) with zero mean and known variance of $$\sigma_{yi}^2$$ about the model. The normal distribution's probability function (as given by [its Wikipedia Page](https://en.wikipedia.org/wiki/Normal_distribution)) is: 
 
 $$
