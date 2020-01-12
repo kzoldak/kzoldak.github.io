@@ -178,7 +178,7 @@ $I$ is short-hand for all the prior knowledge of the $$x_i$$ and the $$\sigma_{y
 
 
 
-# Vector Form
+<!-- # Vector Form
 $$
 \begin{equation}
 \qquad 
@@ -222,4 +222,4 @@ git add -A
 
 git commit -m 'new'
 
-git push origin master
+git push origin master -->
