@@ -5,7 +5,7 @@ comments: true
 ---
 
 # Data set or sample
-A data set is a compilation of $$n$$ number of data points, each having an x-axis and y-axis value: $$(x_1, y_1), (x_2, y_2), ..., (x_n, y_n)$$. The data set makes up a list of data points, and with lists we often refer to an arbitrary location within it as the $$ith$$ posision or $$ith$$ variable. Thus, in our data set, any arbitrary data point will be referred to as the $$ith$$ data point and this is presented with an $$i$$ subscript (e.g., $$x_i, y_i$$). Thus, our data runs from position $$i=1$$ to $$i=n$$. This notation is popular in physics. Say you have a list of $$n=5$$ data points and you want to sum over their x-axis values. Expanded, this would be written as:
+A data set is a compilation of $$n$$ number of data points, each having an x-axis and y-axis value: $$(x_1, y_1), (x_2, y_2), ..., (x_n, y_n)$$. The data set makes up a list of data points, and with lists we often refer to an arbitrary location within it as the $$ith$$ posision or $$ith$$ variable. Thus, in our data set, any arbitrary data point will be referred to as the $$ith$$ data point and this is presented with an $$i$$ subscript (e.g., $$(x_i, y_i)$$). Thus, our data runs from position $$i=1$$ to $$i=n$$. This notation is popular in math, statistics, and physics. Say you have a list of $$n=5$$ data points and you want to sum over their x-axis values. Expanded, this would be written as:
 $$x_1 + x_2 + x_3 + x_4 + x_5$$ or $$x_1 + x_2 + ... + x_5$$, but in compact form it is shown using a summation sign:
 $$
 \begin{equation}
@@ -40,6 +40,20 @@ $$ -->
 
 <!-- But what causes this scatter? For one, basic statistical probabilities. For example, take the first data point in our sample $$(x_1, y_1)$$. If we had the capability of making this identical observation over and over, we would see that we don't get the same exact values for $$x$$ and $$y$$ every time. This is due to statistical fluctuations. If we make the observation over and over and over again, a very large number of times, what we will see is that these observations produce a Gaussian distribution with the mean falling on the true best fit line. This is the basic idea behind the law of large numbers; as $$n\rightarrow \infty$$, the distribution of those $$n$$ observations tends toward a Gaussian. ***** SPLIT HERE *****
 In reality, data points are though to be drawn from a truly straight line, but there are mechanisms that cause our observations to have uncertainties in those values. Therefore we get a set of data points which are scattered about that true line. We can't know this true line, and what we are actually doing when we fit a line to the data is attempting to estimate it (via its parameters).  -->
+
+
+# Linear Regression
+The most basic form of regression in linear, and the concept is to take the equation of a line and fit it to the data. The motivation for this comes when your data, plotted in x-y space, appears to have a relationship that is linear. It could be linearly decreasing or increasing, direction does not matter, but it has to be monotonic. If our data is monotonically increasing or decreasing and in fairly linear in appearance, then we opt to fit a straight line to our data. 
+
+
+The equation of a line is: 
+$$y = m x + b $$, and if we have a data set with multiple data points, each having x- and y-values, then the linear model is better written as $$y_i = m x_i + b $$. $$x_i$$ is the x-axis value of the $$ith$$ data point, $$m$$ is the slope of the line, and $$b$$ is its y-intercept (or simply intercept). 
+The $$y_i$$ is the $$ith$$ model-determine y-axis value. One the line is fit to the data and the best-fitting slope and intercept values are found, these are plugged into $$m$$ and $$b$$ and the y-axis model values can be found. Since they are model determined, they make a straight line. 
+<!-- The determination of how good your linear fit is will be discussed later. -->
+
+In reality, x- and y- data never make a truly perfect linear relationship; there will always be some scatter about the linear model. 
+
+
 
 
 
