@@ -29,23 +29,15 @@ $$
 f(x\mid \mu, \sigma^{2}) = \frac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{1}{2} \chi^2}
 $$
 
-where $$\chi^2$$ is 
+where $$\chi^2$$
 $$
-\sum_{i=1}^{N} \left(\frac{x_i-\mu}{\sigma} \right)^2
+\chi^2 = \sum_{i=1}^{N} \left(\frac{x_i-\mu}{\sigma} \right)^2
 $$
-and is the statistic to be minimized during the fitting process. 
+is the statistic to be minimized during the fitting process. The quotient, $$\left(\frac{x_i-\mu}{\sigma} \right)$$, measures the deviation of $$x$$ from its expected value ($$\mu$$) in units of $$\sigma$$. Thus, $$\sigma$$ defines a length, and this is why minimizing $$\chi^2$$ of a fit gives a metric distance in data space. 
 
+In linear regression, we replace $$x_i$$ with $$y_i$$ and $$\mu$$ with $$y_{model}$$ (or $$m x_i + b$$, the equation of our model is a line). Our $$\sigma$$ becomes $$\sigma_{y_i}$$, the uncertainty on $$y_i$$. 
 
-
-where the quotient $$\left(\frac{x_i-\mu}{\sigma} \right)$$ measures deviation of $$x$$ from its expected value ($$\mu$$) in units of $$\sigma$$ (i.e., $$\sigma$$ defines the length scale). That is why minimizing $$\chi^2$$ of a fit gives a metric distance in data space. 
-
-
-
-
-Since we have data that is normally distributed about a linear model ($$y=mx+b$$), we make the following substitutions: 
-$$x \rightarrow y_i$$, 
-$$\mu \rightarrow y_{model} = mx_i + b$$, and 
-$$\sigma \rightarrow \sigma_{yi}$$. 
+It is not uncommon to see $$a$$ used for slope instead of $$m$$. 
 
 We now have:
 
