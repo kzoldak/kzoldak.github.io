@@ -23,10 +23,10 @@ $$
 
 where $$\mu$$ is the mean, $$\sigma^2$$ is the variance (and thus $$\sigma$$ is the standard deviation). 
 
-This function can also be expresses as:
+This function can also be expressed as:
 
 $$
-f(x\mid \mu, \sigma^{2}) = \frac{1}{\sqrt{2\pi \sigma^{2}}} e^{-\frac{1}{2} \chi^2
+f(x\mid \mu, \sigma^{2}) = \frac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{1}{2} \chi^2}
 $$
 
 where $$\chi^2$$ is 
