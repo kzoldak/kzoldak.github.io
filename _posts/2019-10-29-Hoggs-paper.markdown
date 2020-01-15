@@ -84,7 +84,7 @@ becomes p(y_i \mid x_i, \sigma_{y_i}, m, b), as it is a probability function; th
 
 
 # Maximum Likelihood
-# The Likelihood (and Log-Likelihood) Statistic, $$\mathcal{L}$$
+# The Likelihood (and Log-Likelihood) Statistic
 The likelihood is the frequencey distribution for the observables evaluated at the observed data, $$y_i$$. It is also more commonly referred to as "the likelihood of the parameters", even though it is a function of both the data and the model parameters. The likelihood function is given by:
 
 $$
@@ -92,7 +92,8 @@ $$
 $$
 
 where $$ p(y_i \mid x_i, \sigma_{y_i}, m, b) $$ is the frequencey distribution (or the probability distribution we presented above) for Gaussian distributed data about a linear model. 
-Plugging it into the likelihood:
+In Likelihood form:
+
 $$
 \mathcal{L} = \prod^N_{i=1} \frac{1}{\sqrt{2\pi\sigma_{y_i}^2}} \exp\left(-\frac{(y_i - mx_i - b)^2}{2 \sigma_{y_i}^2}\right) .
 $$
@@ -107,18 +108,18 @@ $$
 $$
 
 
-$$ \ln(\mathcal{L}) = -\frac{n}{2}\ln(2\pi)- n\ln \sigma - \sum \frac{(y_i-y_{model})^2}{2\sigma^2} $$
+$$ \ln(\mathcal{L}) = -\frac{n}{2}\ln(2\pi)- n\ln \sigma - \sum \frac{(y_i-y_{model,i})^2}{2\sigma^2} $$
 
 or
 
 $$ 
-\ln(\mathcal{L}) = -\frac{1}{2} \left[ n\ln(2\pi) + 2 n \ln(\sigma) + \sum \left(\frac{y_i-y_{model}}{\sigma}\right)^2 \right]
+\ln(\mathcal{L}) = -\frac{1}{2} \left[ n\ln(2\pi) + 2 n \ln(\sigma) + \sum \left(\frac{y_i-y_{model,i}}{\sigma}\right)^2 \right]
 $$
 
 Since we have technically set up the probability function to be dependent on $$\sigma_{y_i}$$, we should write the function as:
 
 $$ 
-\ln(\mathcal{L}) = -\frac{1}{2} \left[ n\ln(2\pi) + 2 n \ln(\sigma_{y_i}) + \sum \left(\frac{y_i-y_{model}}{\sigma_{y_i}}\right)^2 \right]
+\ln(\mathcal{L}) = -\frac{1}{2} \left[ n\ln(2\pi) + 2 n \ln(\sigma_{y_i}) + \sum \left(\frac{y_i-y_{model,i}}{\sigma_{y_i}}\right)^2 \right]
 $$
 
 
