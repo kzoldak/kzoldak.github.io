@@ -25,7 +25,9 @@ and [his Github Page with content to go with it](https://github.com/wesm/pydata-
 
 ## Pandas dataframes
 [Brenda Hali's Pandas Cheat Sheet](https://towardsdatascience.com/my-pandas-cheat-sheet-b71437ab26f)
+
 [PyData's Pandas Cheat Sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
+
 [Data Camp's Pandas Cheat Sheet](https://www.datacamp.com/community/blog/python-pandas-cheat-sheet)
 
 ## Plotting in Matplotlib
