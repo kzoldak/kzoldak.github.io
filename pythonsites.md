@@ -4,11 +4,16 @@ title: Python Sites
 permalink: /pythonsites/
 ---
 
-### I will post useful python websites and blogs here.
+Some of my favorite python resources. 
+
+
 
 ## Python (General)
 [Class Inheritance (in Python) Explained best by Jess Hamrick](http://www.jesshamrick.com/2011/05/18/an-introduction-to-classes-and-inheritance-in-python/)
 [Python Data Camp Tutorials](https://www.datacamp.com/community/tutorials)
+
+
+
 
 ## Data Science Specific Tools
 [Python Data Science Handbook by Jake VanderPlas](https://www.safaribooksonline.com/library/view/python-data-science/9781491912126/)
@@ -23,20 +28,38 @@ permalink: /pythonsites/
 [__BOOK__:Python for Data Analysis by Wes McKinney.](https://www.oreilly.com/library/view/python-for-data/9781449323592/)
 and [his Github Page with content to go with it](https://github.com/wesm/pydata-book). This guy was a creator of [pandas](https://pandas.pydata.org/), so clearly he rocks!!
 
+
+
+
 ## Pandas dataframes
 [Brenda Hali's Pandas Cheat Sheet](https://towardsdatascience.com/my-pandas-cheat-sheet-b71437ab26f)
+
+[Brenda Hali's Pandas Cheat Sheet via her Github page](https://gist.github.com/BrendaHali/2b8f6f218492a94cb74eea5043d64867)
+
 
 [PyData's Pandas Cheat Sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
 
 [Data Camp's Pandas Cheat Sheet](https://www.datacamp.com/community/blog/python-pandas-cheat-sheet)
+
+[Kevin Markham's Data School Notebook on Pandas: Learn data analysis, manipulation, and visualization with pandas](http://nbviewer.jupyter.org/github/justmarkham/pandas-videos/blob/master/pandas.ipynb)
+
+
+
+
 
 ## Plotting in Matplotlib
 [Drop and Drag Text Example code, for moving text labels](http://scipy-cookbook.readthedocs.io/items/Matplotlib_Drag_n_Drop_Text_Example.html)
 --> This performed in iPython, must save image as .pdf, .ps, .eps, .cps because .png, .jpeg, and .tiff suffer resolution loss that can't be avoided (to my knowledge). Setting the dpi doesn't help.
 
 
+
+
+
 ## Numpy
 [__BOOK__:Python for Data Analysis by Wes McKinney. Ch 4. NumPy Basics: Arrays and Vectorized Computation](https://www.oreilly.com/library/view/python-for-data/9781449323592/ch04.html)
+
+
+
 
 
 ## IPython
