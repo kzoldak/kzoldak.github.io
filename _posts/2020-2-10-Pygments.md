@@ -4,7 +4,7 @@ title: Pygments
 comments: true
 ---
 
-Today I discovered a neat tool for displaying code within Jupyter notebooks. It invoves the use of [Pygments](https://pygments.org/). Pygments 
+Today I discovered a neat tool for displaying code within Jupyter notebooks. It invoves the use of [Pygments](https://pygments.org/). 
 
 {% highlight ruby %}
 from pygments import highlight
