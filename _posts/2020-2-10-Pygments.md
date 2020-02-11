@@ -22,4 +22,4 @@ IPython.display.HTML('<style type="text/css">{}</style>{}'.format(formatter.get_
 
 {% endhighlight %}
 
-This will display what is within the `out.json` file. 
+If you run this within Jupyter notebooks, it will display what is within the `out.json` file. You can do this for any file you desire, including your `*.py` files. 
